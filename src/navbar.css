@@ -1,0 +1,42 @@
+nav {
+    background-color: black;
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: 2px solid blueviolet;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#nav_menu {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+
+    li {
+        height: 100%;
+        display: flex;
+        align-content: center;
+        padding: 0;
+
+        :hover {
+            background-color: blueviolet;
+            transition: 0.3s ease-in-out;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 0 20px;
+            height: 100%;
+            align-content: center;
+        }
+    }
+
+}
+
+.logo {
+    align-self: center;
+}
+
