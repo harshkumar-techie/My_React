@@ -6,6 +6,8 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    width: 100%;
+    position: fixed;
 }
 
 #nav_menu {
