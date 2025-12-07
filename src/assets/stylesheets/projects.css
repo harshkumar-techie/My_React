@@ -1,0 +1,106 @@
+#calculator {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator_nav {
+    height: 65px;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#calculator_nav span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+
+#calculator_body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator_component {
+    width: 40%;
+    height: 80%;
+    border: 1px solid rgb(59, 59, 59);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+#cal_controls {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#cal_screen {
+    height: 90%;
+    width: 96.9%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(59, 59, 59);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 65px;
+    padding: 0 20px;
+    grid-column: span 3;
+    overflow: hidden;
+}
+
+
+
+#cal_controls button {
+    border: 1px solid rgb(59, 59, 59);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    align-self: center;
+    justify-self: center;
+    overflow: hidden;
+}
+
+#cal_controls button:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(80%);
+}
+@media  (max-width: 768px) {
+
+    #calculator_component {
+        width: 80%;
+        height: 70%;
+    }
+
+    #cal_screen {
+        font-size: 40px;
+    }
+
+    #cal_controls button {
+        font-size: 30px;
+    }
+    
+}

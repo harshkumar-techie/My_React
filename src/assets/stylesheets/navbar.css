@@ -1,44 +1,109 @@
-nav {
-    background-color: black;
+#navbar {
+    background: black;
     height: 60px;
+    overflow: hidden;
     box-sizing: border-box;
-    border-bottom: 2px solid blueviolet;
+    border-bottom: 2px solid white;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
+    backdrop-filter: blur(2px);
+    top: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
+
+#navbar.nav_open {
+    height: 120px;
+    
+}
+
+#logo_btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+}
+
+#three_dots {
+    display: none;
+    height: 58px;
+    width: 58px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#three_dots.nav_open {
+    transform: rotate(-90deg);
+}
+
+#three_dots div {
+    width: 60%;
+    height: 4px;
+    background-color: white;
+    list-style: none;
+    border-radius: 20px;
+}
+
 
 #nav_menu {
     display: flex;
-    list-style: none;
     height: 100%;
     align-items: center;
+    transition: all 0.3s ease;
+}
 
-    li {
-        height: 100%;
-        display: flex;
-        align-content: center;
-        padding: 0;
+#nav_menu li {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
 
-        :hover {
-            background-color: blueviolet;
-            transition: 0.3s ease-in-out;
-        }
+#nav_menu li a {
+    text-decoration: none;
+    flex-grow: 1;
+    color: white;
+    padding: 0 20px;
+    height: 100%;
+    box-sizing: border-box;
+    align-content: center;
+    display: block;
+}
 
-        a {
-            text-decoration: none;
-            color: white;
-            padding: 0 20px;
-            height: 100%;
-            align-content: center;
-        }
-    }
 
+
+#nav_menu li:hover {
+    background-color: blueviolet;
+    padding-bottom: 10px;
 }
 
 .logo {
-    align-self: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
+
+@media screen and (max-width: 600px) {
+
+    #navbar {
+        flex-direction: column;
+    }
+    #three_dots {
+        display: flex;
+    }
+}

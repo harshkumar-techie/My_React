@@ -11,3 +11,21 @@ body {
     color: white; 
     min-height: 100vh;
 }
+
+#content{
+    margin-left: 13vw;
+    margin-top: 60px;
+    box-sizing: border-box;
+    background-image: url('../img/bg.jpg');
+    object-fit: cover;
+    height: calc(100vh - 60px);
+    width: calc(87vw);
+    position: fixed;
+}
+
+@media screen and (max-width: 600px) {
+    #content{
+        margin-left: 0;
+        width: 100vw;
+    }
+}
